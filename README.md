@@ -2,4 +2,4 @@ A small and simple shell script to help ease the installion of a LAMP stack on F
 =========================================================================================
 
 [Read more about it](http://enile8.github.com/fedora-lamp-install.html)
-Directions for [Running the Script](file:///home/blake/Documents/enile8.github.com/fedora-lamp-install.html#directions)
+Directions for [Running the Script](http://enile8.github.com/fedora-lamp-install.html#directions)
