@@ -4,11 +4,9 @@
 # Version 0.1
 # May 11, 2012
 # Copyright (c) 2012 Blake McCulley <http://enile8.org>
-# https://github.com/enile8/fedora-lamp-sh
+# https://github.com/enile8/fedora-shell-scripts
 # This script is licensed under GNU GPL version 2.0 or above
 #==========================================================================
-echo -n "This script will install a complete LAMP stack on Fedora 16
-"
 echo -n "Would you like to install PHP, Python, or Perl: "
 read lang
 
@@ -36,6 +34,8 @@ then
 
 	# moving on the MySQL
 	yum install mysql mysql-server
+	# configure the service to start automatically
+	/sbin/chkconfig mysqld on
 	# start MySQL
 	/sbin/service mysqld start
 	sleep 5
@@ -59,7 +59,7 @@ then
 		then
 			echo "Please file an issue so I know that it needs
 			to be fixed.
-			https://github.com/enile8/fedora-lamp-sh/issues
+			https://github.com/enile8/fedora-shell-scripts/issues
 			"
 		fi
 		if [ "${padmin,,}" = "y" ]
@@ -85,7 +85,7 @@ then
 	echo "The install is now complete!
 	Thanks for using my script.
 	Let me know if there were any problems.
-	https://github.com/enile8/fedora-lamp-sh/issues"
+	https://github.com/enile8/fedora-shell-scripts/issues"
 else
 	echo "Apache is already installed!"
 fi
